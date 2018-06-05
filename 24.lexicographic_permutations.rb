@@ -10,6 +10,10 @@
 #2783915460
 #2, 7, 8, 3, 9, 1, 5, 6, 4, 0
 
+timer_start = Time.now
+
 lexicographic_array = [0,1,2,3,4,5,6,7,8,9].permutation(10).to_a
 
-puts "Millionth lexicographic number is #{lexicographic_array[1000000+1]}"
+puts "Millionth lexicographic number is #{lexicographic_array[1000000+1].join()}"
+
+puts "Elapsed Time: #{(Time.now - timer_start)*1000} milliseconds"
