@@ -63,14 +63,14 @@ class CoinCounter
   end
    
   private
-    def count_combos(amount, pos)
-      return (amount % @coins[pos] == 0 ? 1 : 0) if (pos == 0)
-      (0..amount/@coins[pos].floor).inject(0) { |sum, count| sum + count_combos(amount - count * @coins[pos], pos-1) }  
+    def count_combos(ammount, position)
+      return (ammount % @coins[position] == 0 ? 1 : 0) if (position == 0)
+      (0..ammount/@coins[position].floor).inject(0) { |sum, count| sum + count_combos(ammount - count * @coins[position], position-1) }  
     end
      
   public
-    def coin_combinations(amount)
-      count_combos(amount, @coins.length-1)
+    def coin_combinations(ammount)
+      count_combos(ammount, @coins.length-1)
     end
 end
  
