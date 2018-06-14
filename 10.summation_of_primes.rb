@@ -24,6 +24,8 @@ ii = 17
 j = 8
 k = 0 
 puts "Loop start"
+timer_start = Time.now
+
 while (j < 2000000 )
 	
 	k = prime_number_check(j);
@@ -33,7 +35,9 @@ while (j < 2000000 )
 	end
 	j= j+1
 end
-puts arr
+puts "Elapsed Time: #{(Time.now - timer_start)}seconds"
+
+#puts arr
 puts "Loop end "
 
 puts "The summetion of prime number upto 2000000 is #{ii}"
